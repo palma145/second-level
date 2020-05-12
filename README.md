@@ -1,11 +1,11 @@
-# second-level
+# Aplicación Demo : second-level
 Aplicación de ejemplo donde toco distintos usos de spring.
 
   - JPA + Cache level 2 con ehcache. PostgreSQL
   - Aspectos
   - Externalización de propiedades con Spring Cloud Config y Vault
   
-# Desplegar la Aplicacion
+# deploy
 
   - docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=pass -d postgres
   - docker cp ./data_second_level/dump_data.sql postgres:/root/dump_data.sql
