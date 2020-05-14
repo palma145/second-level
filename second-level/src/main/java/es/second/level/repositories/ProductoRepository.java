@@ -9,12 +9,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.stereotype.Repository;
 
-import es.second.level.entities.UserEntity;
+import es.second.level.entities.ProductoEntity;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, String> {
+public interface ProductoRepository extends JpaRepository<ProductoEntity, String> {
 
 	@QueryHints({@QueryHint(name = "org.hibernate.cacheable", value = "true")})
-	@Query(value = "SELECT u FROM UserEntity u")
-	List<UserEntity> findAllCache();
+	@Query(value = "SELECT p FROM ProductoEntity p")
+	List<ProductoEntity> findAllCache();
 }

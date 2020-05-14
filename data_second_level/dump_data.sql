@@ -5,8 +5,6 @@
 -- Dumped from database version 12.2 (Debian 12.2-2.pgdg100+1)
 -- Dumped by pg_dump version 12.2 (Debian 12.2-2.pgdg100+1)
 
--- Started on 2020-05-12 09:32:54 UTC
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -19,7 +17,6 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 8 (class 2615 OID 16384)
 -- Name: second_level; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -33,30 +30,27 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 203 (class 1259 OID 16385)
--- Name: users; Type: TABLE; Schema: second_level; Owner: postgres
+-- Name: productos; Type: TABLE; Schema: second_level; Owner: postgres
 --
 
-CREATE TABLE second_level.users (
-    username character varying(25) NOT NULL,
-    password character varying(25) NOT NULL
+CREATE TABLE second_level.productos (
+    id character varying(50) NOT NULL,
+    name character varying(100) NOT NULL,
+    price character varying(20) NOT NULL
 );
 
 
-ALTER TABLE second_level.users OWNER TO postgres;
+ALTER TABLE second_level.productos OWNER TO postgres;
 
 --
--- TOC entry 2902 (class 0 OID 16385)
--- Dependencies: 203
--- Data for Name: users; Type: TABLE DATA; Schema: second_level; Owner: postgres
+-- Data for Name: productos; Type: TABLE DATA; Schema: second_level; Owner: postgres
 --
 
-INSERT INTO second_level.users VALUES ('admin', 'admin');
-INSERT INTO second_level.users VALUES ('user1', 'user1');
-INSERT INTO second_level.users VALUES ('user2', 'user2');
+COPY second_level.productos (id, name, price) FROM stdin;
+01e196a9-9edc-426f-a8fa-5f3cd87192c4	producto1 actualizado	12
+f27800a9-63ca-4b7d-a81c-9a480a5809e5	producto 3 act	12
+\.
 
-
--- Completed on 2020-05-12 09:32:54 UTC
 
 --
 -- PostgreSQL database dump complete

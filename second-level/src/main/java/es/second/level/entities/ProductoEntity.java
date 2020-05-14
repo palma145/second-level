@@ -18,16 +18,19 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users", schema = "second_level")
+@Table(name = "productos", schema = "second_level")
 @Entity
 @Cacheable("secondLevelCache")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class UserEntity {
-
-	@Id
-	@Column(name = "username")
-	private String username;
+public class ProductoEntity {
 	
-	@Column(name = "password")
-	private String password;
+	@Id
+	@Column(name = "id")
+	private String id;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "price")
+	private String price;
 }

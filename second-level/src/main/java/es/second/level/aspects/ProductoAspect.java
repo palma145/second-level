@@ -1,4 +1,4 @@
-package es.second.level.services.impl;
+package es.second.level.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Aspect
 @Component
 @Order(2)
-public class UserAspectImpl {
+public class ProductoAspect {
 
 	@Around(value = "execution(public * es.second.level.services.*.get*(..))")
 	public Object adviceGetUserById(ProceedingJoinPoint pjp) {
