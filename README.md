@@ -22,7 +22,9 @@ Aplicación de ejemplo donde toco distintos usos de spring.
   
   Con esto tenemos levantado vault
   
-  - Iniciamos config-second-level
-  - Iniciamos second-level
+  Iniciamos config-second-level
+  - mvn spring-boot:run
   
+  Iniciamos second-level
+  - mvn spring-boot:run  
   
