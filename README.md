@@ -9,7 +9,8 @@ Aplicación de ejemplo donde toco distintos usos de spring.
 
   - docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=pass -d postgres
   - docker cp ./data_second_level/dump_data.sql postgres:/root/dump_data.sql
-  - /usr/bin/psql -d postgres -U postgres -f dump_data.sql
+  - docker exec -it postgres bash
+  - /usr/bin/psql -d postgres -U postgres -f /root/dump_data.sql
   
   Con esto tenemos postgres levantado
   
