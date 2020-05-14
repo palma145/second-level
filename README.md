@@ -14,7 +14,7 @@ Aplicación de ejemplo donde toco distintos usos de spring.
   
   Con esto tenemos postgres levantado
   
-  - docker run -d --name vault--cap-add=IPC_LOCK -e VAULT_DEV_ROOT_TOKEN_ID=myroot -e VAULT_ADDR=http://localhost:8200 -e VAULT_TOKEN=myroot vault
+  - docker run -d --name vault --cap-add=IPC_LOCK -e VAULT_DEV_ROOT_TOKEN_ID=myroot -e VAULT_ADDR=http://localhost:8200 -e VAULT_TOKEN=myroot -p 8200:8200 vault
   - docker exec -it vault sh
   - vault login myroot
   - vault kv put secret/second-level spring.datasource.password=pass spring.datasource.username=postgres
